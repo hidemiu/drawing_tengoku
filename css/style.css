@@ -130,80 +130,85 @@ body {
 /* --------------------------------
  * works
  * -------------------------------- */
-.works {
+.gallery {
   padding: 80px 0;
   background-color: #383634;
 }
-.works-wrapper {
+.galleries-wrapper {
   display: table;
   width: 100%;
   margin-top: 60px;
   table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 10px 0;
 }
-.work-box {
+.gallery-box {
   position: relative;
   display: table-cell;
 }
-.work-image {
+.gallery-image {
   display: block;
   width: 100%;
-  margin: 0 0 60%;
+  margin: 0 0 100%;
 }
-.work-description {
+.gallery-description {
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 0;
   z-index: 1;
   width: 100%;
   height: 50%;
   overflow-y: auto;
 }
-.work-description-inner {
+.gallery-description-inner {
   display: table;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 0px;
 }
-.work-text {
+.gallery-text {
   display: table-cell;
   vertical-align: middle;
   font-size: 1.2rem;
   line-height: 2;
 }
-.work-text .button {
-  width: 60%;
+.gallery-text .button {
+  width: 50%;
   margin-top: 20px;
   padding: 3px;
 }
-.work-box::after {
+.gallery-box::after {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 0;
   width: 100%;
   height: 50%;
   background: no-repeat;
   background-size: 100% 100%;
   opacity: 0.2;
-  transform: scaleY(-1);
+/*  transform: scaleY(-1);*/
 }
-.work-box.tree::after {
-  background-image: url('../images/tree.jpg');
+.gallery-box.first::after {
+  background-image: url('../images/gallery_1.jpg');
 }
-.work-box.building::after {
-  background-image: url('../images/building.jpg');
+.gallery-box.second::after {
+  background-image: url('../images/gallery_2.jpg');
 }
-.work-box.lake::after {
-  background-image: url('../images/lake.jpg');
+.gallery-box.third::after {
+  background-image: url('../images/gallery_3.jpg');
 }
-.work-box.sky::after {
-  background-image: url('../images/sky.jpg');
+.gallery-box.fourth::after {
+  background-image: url('../images/gallery_4.jpg');
 }
-.work-box:nth-child(odd) .work-image {
-  margin: 60% 0 0;
+.gallery-box.fifth::after {
+  background-image: url('../images/gallery_5.jpg');
 }
-.work-box:nth-child(odd) .work-description,
-.work-box:nth-child(odd)::after {
+.gallery-box:nth-child(odd) .gallery-image {
+  margin: 100% 0 0;
+}
+.gallery-box:nth-child(odd) .gallery-description,
+.gallery-box:nth-child(odd)::after {
   top: 0;
 }
 
