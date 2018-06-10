@@ -212,6 +212,25 @@ body {
 .gallery-box:nth-child(odd)::after {
   top: 0;
 }
+.more {
+  text-align: right;
+  margin: 10px 10px 0;
+}
+.more-icon {
+  font-size: 4em;
+  color: #CF2E92;
+}
+.more-text {
+  font-size: 3em;
+  color: #fff;
+  text-decoration: none;
+}
+.more-icon:hover {
+  opacity: 0.5;
+}
+.more-text:hover {
+  opacity: 0.5;
+}
 
 
 /* --------------------------------
