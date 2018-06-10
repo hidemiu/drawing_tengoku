@@ -14,9 +14,19 @@ body {
   font-size: 1.4rem;
   font-family: Raleway, "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
 }
+
+// Set box-sizing to border-box.
+// Probably one is enough.
 *, *::before, *::after {
   box-sizing: border-box;
 }
+/*
+* {
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box
+}
+*/
 
 
 /* --------------------------------
@@ -68,9 +78,12 @@ body {
 /* --------------------------------
  * header
  * -------------------------------- */
+
+/* Margin to shrink screen or change font size. */
 .header {
   padding: 170px 30px 80px;
 }
+
 .site-title-sub {
   margin: 0 0 30px;
   letter-spacing: 1px;
@@ -104,39 +117,42 @@ body {
  * about
  * -------------------------------- */
 .about {
-  padding: 80px 30px;
+  padding: 80px 0px;
   background-color: #fff;
   color: #333;
 }
 .about-text {
   margin: 30px 0;
   line-height: 2.5;
+  font-size: 1.6rem;
 }
 
 
 /* --------------------------------
  * works
  * -------------------------------- */
-.works {
+.gallery {
   padding: 80px 0;
   background-color: #383634;
 }
-.works-wrapper {
+.galleries-wrapper {
   display: table;
   width: 100%;
   margin-top: 60px;
   table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0px 0;
 }
-.work-box {
+.gallery-box {
   position: relative;
   display: table-cell;
 }
-.work-image {
+.gallery-image {
   display: block;
   width: 100%;
-  margin: 0 0 60%;
+  margin: 0 0 100%;
 }
-.work-description {
+.gallery-description {
   position: absolute;
   top: 50%;
   left: 0;
@@ -145,24 +161,24 @@ body {
   height: 50%;
   overflow-y: auto;
 }
-.work-description-inner {
+.gallery-description-inner {
   display: table;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 0px;
 }
-.work-text {
+.gallery-text {
   display: table-cell;
   vertical-align: middle;
   font-size: 1.2rem;
   line-height: 2;
 }
-.work-text .button {
-  width: 60%;
+.gallery-text .button {
+  width: 50%;
   margin-top: 20px;
   padding: 3px;
 }
-.work-box::after {
+.gallery-box::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -172,25 +188,28 @@ body {
   background: no-repeat;
   background-size: 100% 100%;
   opacity: 0.2;
-  transform: scaleY(-1);
+/*  transform: scaleY(-1);*/
 }
-.work-box.tree::after {
-  background-image: url('../images/tree.jpg');
+.gallery-box.first::after {
+  background-image: url('../images/gallery_1.jpg');
 }
-.work-box.building::after {
-  background-image: url('../images/building.jpg');
+.gallery-box.second::after {
+  background-image: url('../images/gallery_2.jpg');
 }
-.work-box.lake::after {
-  background-image: url('../images/lake.jpg');
+.gallery-box.third::after {
+  background-image: url('../images/gallery_3.jpg');
 }
-.work-box.sky::after {
-  background-image: url('../images/sky.jpg');
+.gallery-box.fourth::after {
+  background-image: url('../images/gallery_4.jpg');
 }
-.work-box:nth-child(odd) .work-image {
-  margin: 60% 0 0;
+.gallery-box.fifth::after {
+  background-image: url('../images/gallery_5.jpg');
 }
-.work-box:nth-child(odd) .work-description,
-.work-box:nth-child(odd)::after {
+.gallery-box:nth-child(odd) .gallery-image {
+  margin: 100% 0 0;
+}
+.gallery-box:nth-child(odd) .gallery-description,
+.gallery-box:nth-child(odd)::after {
   top: 0;
 }
 
@@ -198,6 +217,7 @@ body {
 /* --------------------------------
  * skills
  * -------------------------------- */
+/*
 .skills {
   padding: 80px 0;
   background-color: #fff;
@@ -232,12 +252,36 @@ body {
 }
 
 
+*/
 /* --------------------------------
  * contact
  * -------------------------------- */
 .contact {
   padding: 80px 0 150px;
+  background-color: #fff;
+  color: #333;
 }
+.contact-icon {
+/*  width: 150px;*/
+/*  height: 150px;*/
+/*  margin-bottom: 30px;*/
+/*  border: 4px solid;*/
+/*  border-radius: 50%;*/
+  font-size: 8rem;
+/*  line-height: 142px;*/
+}
+.line-icon {
+  color: #00B900;  
+}
+.fb-icon {
+  color: #3C5A99;  
+}
+.insta-icon {
+  color: #CF2E92;
+}
+
+/*Form in contact*/
+/*
 .contact-form {
   width: 50%;
   margin: 50px auto 0;
@@ -249,9 +293,9 @@ body {
   margin-bottom: 10px;
   padding: 15px;
   outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 0;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
   color: #fff;
 }
 .contact-form input[type=text]:focus,
@@ -266,15 +310,16 @@ body {
   width: 200px;
   margin: 40px auto 0;
   padding: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
 }
 .contact-form input[type=submit]:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(1, 1, 1, 0.05);
 }
+*/
 
 
 /* --------------------------------
@@ -283,6 +328,9 @@ body {
 .footer {
   padding: 12px 0;
   font-size: 1.3rem;
+  background-color: #fff;
+  color: #333;
+
 }
 
 
