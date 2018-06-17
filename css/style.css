@@ -212,6 +212,10 @@ body {
 .gallery-box:nth-child(odd)::after {
   top: 0;
 }
+img:active {
+  zoom: 2;
+}
+
 .more {
   text-align: right;
   margin: 10px 10px 0;
