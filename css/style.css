@@ -205,6 +205,9 @@ body {
 .gallery-box.fifth::after {
   background-image: url('../images/gallery_5.jpg');
 }
+.gallery-box.sixth {
+  display: none;
+}
 .gallery-box:nth-child(odd) .gallery-image {
   margin: 100% 0 0;
 }
@@ -400,22 +403,39 @@ img:active {
     line-height: 1.8;
   }
 
-  /* --- works --- */
-  .works-wrapper,
-  .work-box {
+  /* --- galleries --- */
+  .galleries-wrapper,
+  .gallery-box {
     display: block;
+    margin-top: 0;
   }
-  .work-image {
+  .gallery-image {
+    float: left;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+  .gallery-text {
     display: none;
   }
-  .work-description {
-    position: relative;
+  .gallery-description {
+    display: none;
   }
-  .work-box::after {
-    top: 0;
-    height: 100%;
-    background-size: cover;
-    transform: none;
+  .gallery-box::after {
+    display: none;
+  }
+  .gallery-box.sixth {
+  display: block;
+  }
+  .gallery-box:nth-child(odd) .gallery-image {
+    margin: 0;
+  }
+  .more {
+    clear: both;
+    text-align: center;
+  }
+  .more-icon {
+    margin-top: 30px;
   }
 
   /* --- skills --- */
