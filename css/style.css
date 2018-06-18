@@ -435,11 +435,11 @@ img:active {
     text-align: center;
   }
   .more-icon {
-    font-size: 1em
-    margin-top: 30px;
+    font-size: 2em;
+    margin-top: 20px;
   }
   .more-text {
-    font-size: 1em;
+    font-size: 2em;
   }
 
   /* --- skills --- */
