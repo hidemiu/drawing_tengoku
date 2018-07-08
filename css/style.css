@@ -408,12 +408,15 @@ img:active {
   .gallery-box {
     display: block;
     margin-top: 0;
+    margin-bottom: 20px;
   }
   .gallery-image {
-    float: left;
+    float: none;
     display: block;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
+    border: groove;
+    border-width: thick
 }
   .gallery-text {
     display: none;
@@ -428,7 +431,7 @@ img:active {
   display: block;
   }
   .gallery-box:nth-child(odd) .gallery-image {
-    margin: 0;
+    margin: 0 auto;
   }
   .more {
     clear: both;
@@ -436,7 +439,6 @@ img:active {
   }
   .more-icon {
     font-size: 2em;
-    margin-top: 20px;
   }
   .more-text {
     font-size: 2em;
